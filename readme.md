@@ -1,36 +1,41 @@
 # Round Robin Simulator - Sistema de Controle de Processos
 
-**Projeto desenvolvido para a disciplina de Sistemas Operacionais**
+Projeto desenvolvido para a disciplina de Sistemas Operacionais
 
 ## Sobre o Projeto
 
-Este projeto implementa o algoritmo de escalonamento **Round Robin** para controle de processos, simulando a execução de 3 processos com quantum fixo de 2 unidades de tempo.
+Este projeto implementa o algoritmo de escalonamento Round Robin para controle de processos, simulando a execução de 3 processos com quantum fixo de 2 unidades de tempo.
 
-### Especificações
-- **Processo 1**: 10 unidades de tempo
-- **Processo 2**: 5 unidades de tempo  
-- **Processo 3**: 8 unidades de tempo
-- **Quantum**: 2 unidades de tempo
+## Especificações
 
----
+- **Processo 1:** 10 unidades de tempo
+- **Processo 2:** 5 unidades de tempo
+- **Processo 3:** 8 unidades de tempo
+- **Quantum:** 2 unidades de tempo
 
 ## Como Executar
 
-### Opção 1: Executável (Mais Rápido)
-1. Navegue até a pasta: `RoundRobinSimulator/RoundRobinSimulator/bin/Debug/net9.0/`
-2. Execute `RoundRobinSimulator.exe`
+### Pré-requisitos
+- .NET SDK 9.0 ou superior instalado
 
-### Opção 2: Visual Studio
-1. Abra `RoundRobinSimulator.sln` no Visual Studio
-2. Pressione F5 ou clique em "Iniciar"
+### Instruções para Execução
 
-### Opção 3: Terminal/PowerShell
-```bash
-cd RoundRobinSimulator/RoundRobinSimulator
-dotnet run
-```
+1. **Clone o repositório** (se ainda não tiver feito)
+2. **Navegue para a pasta do projeto:**
+   ```bash
+   cd RoundRobinSimulator/RoundRobinSimulator
+   ```
+3. **Execute o projeto:**
+   ```bash
+   dotnet run
+   ```
 
----
+O programa será compilado automaticamente e executado, exibindo a simulação completa do algoritmo Round Robin.
+
+### Alternativa usando Visual Studio
+Se preferir, também é possível:
+1. Abrir `RoundRobinSimulator.sln` no Visual Studio
+2. Pressionar F5 ou clicar em "Iniciar"
 
 ## Saída do Programa
 
@@ -80,8 +85,6 @@ Tempo médio de retorno: 18.00
 • Bom tempo de resposta para processos interativos
 ```
 
----
-
 ## Estrutura do Projeto
 
 ```
@@ -91,31 +94,22 @@ RoundRobinSimulator/
 │   ├── EscalonadorRoundRobin.cs    # Algoritmo principal
 │   ├── RelatorioExecucao.cs        # Relatórios e saídas
 │   ├── Program.cs                  # Ponto de entrada
-│   └── bin/Debug/net9.0/           # Executável
-│       └── RoundRobinSimulator.exe
+│   └── RoundRobinSimulator.csproj  # Configuração do projeto
 ├── RoundRobinSimulator.sln         # Arquivo da solução
 └── README.md                       # Este arquivo
 ```
 
----
-
 ## Requisitos do Sistema
 
-### Para executar o .exe
-- Windows 10/11
-- .NET 9.0 Runtime (já incluído no executável)
-
-### Para compilar (opcional)
-- Visual Studio 2022
-- .NET SDK 9.0+
-
----
+- **Sistema Operacional:** Windows, Linux ou macOS
+- **.NET SDK 9.0+** para compilação e execução
+- **Terminal/PowerShell** para execução via linha de comando
 
 ## Funcionalidades Implementadas
 
 ### Requisitos Funcionais
 - Recebe lista de processos com tempos de execução
-- Aplica escalonamento Round Robin com quantum = 2  
+- Aplica escalonamento Round Robin com quantum = 2
 - Simula execução em ciclos mostrando processo ativo
 - Indica finalização de todos os processos
 
@@ -124,8 +118,6 @@ RoundRobinSimulator/
 - Estatísticas médias dos processos
 - Sequência completa de execução
 - Interface detalhada com explicações
-
----
 
 ## Algoritmo Round Robin
 
@@ -140,27 +132,21 @@ O Round Robin é um algoritmo de escalonamento preemptivo onde cada processo rec
 5. Processo continua até todos terminarem
 
 ### Características
-- **Justiça**: Todos os processos recebem tempo igual de CPU
-- **Preempção**: Processos podem ser interrompidos  
-- **Tempo de Resposta**: Adequado para sistemas interativos
-- **Overhead**: Existe custo na troca de contexto entre processos
-
----
+- **Justiça:** Todos os processos recebem tempo igual de CPU
+- **Preempção:** Processos podem ser interrompidos
+- **Tempo de Resposta:** Adequado para sistemas interativos
+- **Overhead:** Existe custo na troca de contexto entre processos
 
 ## Resolução de Problemas
 
-**Executável não abre**: Instale o .NET Runtime ou use Visual Studio
-
-**Console fecha rapidamente**: Execute pelo PowerShell com `dotnet run`
-
-**Erro de compilação**: Verifique se todos os 4 arquivos .cs estão presentes
-
----
+- **Erro "dotnet não é reconhecido":** Instale o .NET SDK 9.0 ou superior
+- **Console fecha rapidamente:** Use o terminal e execute `dotnet run`
+- **Erro de compilação:** Verifique se todos os 4 arquivos .cs estão presentes na pasta
 
 ## Informações do Projeto
 
-**Equipe**: Felipe Renan, Jéssica Vitória, Mateus Patrício, Evelyn Júlia e Tiago Sousa  
-**Disciplina**: Sistemas Operacionais  
-**Linguagem**: C# (.NET 9.0)
+- **Equipe:** Felipe Renan, Jéssica Vitória, Mateus Patrício, Evelyn Júlia e Tiago Sousa
+- **Disciplina:** Sistemas Operacionais
+- **Linguagem:** C# (.NET 9.0)
 
 Este projeto demonstra a implementação completa do algoritmo Round Robin com simulação detalhada da execução de processos, cálculos precisos de tempos de espera e retorno, e interface educativa.
