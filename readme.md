@@ -1,12 +1,12 @@
-﻿# 🎯 Round Robin Simulator - Sistema de Controle de Processos
+# Round Robin Simulator - Sistema de Controle de Processos
 
 **Projeto desenvolvido para a disciplina de Sistemas Operacionais**
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto implementa o algoritmo de escalonamento **Round Robin** para controle de processos, simulando a execução de 3 processos com quantum fixo de 2 unidades de tempo.
 
-### 🔧 Especificações
+### Especificações
 - **Processo 1**: 10 unidades de tempo
 - **Processo 2**: 5 unidades de tempo  
 - **Processo 3**: 8 unidades de tempo
@@ -14,30 +14,25 @@ Este projeto implementa o algoritmo de escalonamento **Round Robin** para contro
 
 ---
 
-## ⚡ **EXECUÇÃO RÁPIDA (30 segundos)**
+## Como Executar
 
-### **Opção 1: Executável Pronto** ⭐ **(MAIS RÁPIDO)**
+### Opção 1: Executável (Mais Rápido)
 1. Navegue até a pasta: `RoundRobinSimulator/RoundRobinSimulator/bin/Debug/net9.0/`
-2. **Duplo clique** em `RoundRobinSimulator.exe`
-3. ✅ **Pronto!** O programa executa automaticamente
+2. Execute `RoundRobinSimulator.exe`
 
-### **Opção 2: Visual Studio** 
+### Opção 2: Visual Studio
 1. Abra `RoundRobinSimulator.sln` no Visual Studio
-2. Pressione **F5** ou clique em ▶️ "Iniciar"
-3. ✅ **Pronto!** O programa executa automaticamente
+2. Pressione F5 ou clique em "Iniciar"
 
-### **Opção 3: Terminal/PowerShell**
+### Opção 3: Terminal/PowerShell
 ```bash
-# Navegar para a pasta do projeto
 cd RoundRobinSimulator/RoundRobinSimulator
-
-# Executar
 dotnet run
 ```
 
 ---
 
-## 🖥️ **Saída Esperada do Programa**
+## Saída do Programa
 
 ```
 SISTEMA DE CONTROLE DE PROCESSOS - ROUND ROBIN
@@ -87,7 +82,7 @@ Tempo médio de retorno: 18.00
 
 ---
 
-## 📁 **Estrutura do Projeto**
+## Estrutura do Projeto
 
 ```
 RoundRobinSimulator/
@@ -96,96 +91,76 @@ RoundRobinSimulator/
 │   ├── EscalonadorRoundRobin.cs    # Algoritmo principal
 │   ├── RelatorioExecucao.cs        # Relatórios e saídas
 │   ├── Program.cs                  # Ponto de entrada
-│   └── bin/Debug/net9.0/           # 📂 Executável aqui
-│       └── RoundRobinSimulator.exe # ⭐ Execute este arquivo
+│   └── bin/Debug/net9.0/           # Executável
+│       └── RoundRobinSimulator.exe
 ├── RoundRobinSimulator.sln         # Arquivo da solução
 └── README.md                       # Este arquivo
 ```
 
 ---
 
-## 🔧 **Requisitos do Sistema**
+## Requisitos do Sistema
 
-### **Mínimos (para executar o .exe)**
-- ✅ Windows 10/11
-- ✅ .NET 9.0 Runtime *(já incluído no executável)*
+### Para executar o .exe
+- Windows 10/11
+- .NET 9.0 Runtime (já incluído no executável)
 
-### **Para compilar (opcional)**
+### Para compilar (opcional)
 - Visual Studio 2022
-- OU .NET SDK 9.0+
+- .NET SDK 9.0+
 
 ---
 
-## 🎓 **Funcionalidades Implementadas**
+## Funcionalidades Implementadas
 
-### ✅ **Requisitos Funcionais**
-- [x] Recebe lista de processos com tempos de execução
-- [x] Aplica escalonamento Round Robin com quantum = 2  
-- [x] Simula execução em ciclos mostrando processo ativo
-- [x] Indica finalização de todos os processos
+### Requisitos Funcionais
+- Recebe lista de processos com tempos de execução
+- Aplica escalonamento Round Robin com quantum = 2  
+- Simula execução em ciclos mostrando processo ativo
+- Indica finalização de todos os processos
 
-### ✅ **Requisitos Não Funcionais**
-- [x] Código legível e bem estruturado
-- [x] Uso adequado de variáveis e funções
-- [x] Código comentado nas principais partes
-- [x] Testado com cenário proposto (P1=10, P2=5, P3=8, quantum=2)
-
-### ✅ **Funcionalidades Extras**
-- [x] Cálculo de tempo de espera e retorno
-- [x] Estatísticas médias dos processos
-- [x] Sequência completa de execução
-- [x] Interface amigável com explicações
+### Funcionalidades Extras
+- Cálculo de tempo de espera e retorno
+- Estatísticas médias dos processos
+- Sequência completa de execução
+- Interface detalhada com explicações
 
 ---
 
-## 🔍 **Algoritmo Round Robin - Explicação**
+## Algoritmo Round Robin
 
-### **Definição**
-O Round Robin é um algoritmo de escalonamento **preemptivo** onde cada processo recebe uma fatia igual de tempo de CPU (quantum).
+### Definição
+O Round Robin é um algoritmo de escalonamento preemptivo onde cada processo recebe uma fatia igual de tempo de CPU (quantum).
 
-### **Funcionamento**
-1. Processos são colocados em uma **fila circular**
-2. Cada processo executa por **no máximo 1 quantum**
-3. Se não terminar, vai para o **final da fila**
+### Como Funciona
+1. Processos são organizados em uma fila circular
+2. Cada processo executa por no máximo 1 quantum
+3. Se não terminar, retorna ao final da fila
 4. Próximo processo da fila executa
-5. Repete até todos terminarem
+5. Processo continua até todos terminarem
 
-### **Características**
-- ⚖️ **Justiça**: Todos os processos recebem tempo igual
-- ⏱️ **Preempção**: Processos podem ser interrompidos  
-- 🚀 **Tempo de Resposta**: Bom para sistemas interativos
-- 🔄 **Overhead**: Troca de contexto entre processos
-
----
-
-## ❓ **Resolução de Problemas**
-
-### **Problema**: Executável não abre
-**Solução**: Instale o .NET Runtime ou use Visual Studio
-
-### **Problema**: Console fecha muito rápido  
-**Solução**: Execute pelo PowerShell com `dotnet run`
-
-### **Problema**: Erro de compilação
-**Solução**: Verifique se todos os 4 arquivos .cs estão presentes
+### Características
+- **Justiça**: Todos os processos recebem tempo igual de CPU
+- **Preempção**: Processos podem ser interrompidos  
+- **Tempo de Resposta**: Adequado para sistemas interativos
+- **Overhead**: Existe custo na troca de contexto entre processos
 
 ---
 
-## 👨‍💻 **Desenvolvedor**
+## Resolução de Problemas
 
-**Nome**: Felipe  
+**Executável não abre**: Instale o .NET Runtime ou use Visual Studio
+
+**Console fecha rapidamente**: Execute pelo PowerShell com `dotnet run`
+
+**Erro de compilação**: Verifique se todos os 4 arquivos .cs estão presentes
+
+---
+
+## Informações do Projeto
+
+**Desenvolvedor**: Felipe  
 **Disciplina**: Sistemas Operacionais  
 **Linguagem**: C# (.NET 9.0)
 
----
-
-## 📚 **Para Avaliação**
-
-Este projeto demonstra:
-- ✅ Implementação completa do algoritmo Round Robin
-- ✅ Simulação detalhada da execução de processos  
-- ✅ Cálculos precisos de tempos de espera e retorno
-- ✅ Interface clara e educativa
-- ✅ Código bem estruturado e documentado
-
-**⏱️ Tempo estimado para execução e avaliação: 2-3 minutos**
+Este projeto demonstra a implementação completa do algoritmo Round Robin com simulação detalhada da execução de processos, cálculos precisos de tempos de espera e retorno, e interface educativa.
