@@ -159,7 +159,7 @@ O Round Robin é um algoritmo de escalonamento preemptivo onde cada processo rec
 
 ## Informações do Projeto
 
-**Desenvolvedor**: Felipe  
+**Equipe**: Felipe Renan, Jéssica Vitória, Mateus Patrício, Evelyn Júlia e Tiago Sousa  
 **Disciplina**: Sistemas Operacionais  
 **Linguagem**: C# (.NET 9.0)
 
